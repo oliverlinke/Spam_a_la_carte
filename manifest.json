@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Spam à la carte",
+  "description": "Generates a spamgourmet disposable email address.",
+  "version": "1.0.0",
+  "icons":
+  {
+    "16": "icon/icon.png",
+    "48": "icon/icon.png",
+    "128": "icon/icon.png"
+  },
+  "options_page": "options.html",
+  "options_ui": 
+  {
+    "page": "options.html",
+    "chrome_style": false,
+    "open_in_tab": true
+  },
+  "background":
+  {
+  "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true,
+      "js": [
+        "contentscript.js"
+      ]
+    }
+  ],
+  "permissions": 
+  [
+    "tabs",
+    "http://*/*", 
+    "https://*/*",
+    "storage",
+    "contextMenus"
+  ],
+  "browser_action":
+  {
+    "default_icon": "icon/icon.png"
+  }
+}
