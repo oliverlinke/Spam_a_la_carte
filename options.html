@@ -9,13 +9,13 @@
     <h1>Spam a la carte</h1>
     <form>
         <b>Username:</b><br>
-        <input type="text" id="username" placeholder="username"><br><br>
+        <input type="text" id="username" name="username" placeholder="username"><br><br>
         <b>Number of email messages you want to receive at this address:</b><br>
-        <input type="number" id="number_of_emails" max="20"><br><br>
+        <input type="number" id="number_of_emails" name="number"><br><br>
         <b>Provider:</b><br>
-        <input type="text" id="provider" placeholder="e.g. spamgourmet.com"><br><br>
-        <button id="save">Save</button>
+        <input type="text" id="provider" name="provider" placeholder="e.g. spamgourmet.com"><br><br>
     </form>
+    <button id="save">Save</button>
     <br><br>
     <div id="status" style="background-color:#ebf5d7; font-size:1.5em;"></div>
     <hr>
